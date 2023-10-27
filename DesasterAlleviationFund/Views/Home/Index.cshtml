@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Registration Form</title>
+    <style>
+        .Donations {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 550px;
+        }
+
+        .H1login {
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        .left-side, .right-side {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-side {
+            background-color: purple;
+            color: #fff;
+        }
+
+        .right-side {
+            background-color: orange;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .button-container button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007b;
+                color: white;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+                .button-container button:hover {
+                    background-color: #007b;
+                }
+    </style>
+</head>
+<body>
+    <h1 class="H1login"> PLEASE SELECT YOUR DONATIONS  </h1>
+    <div class="Donations">
+        <div class="left-side">
+            <h2>MONETARY DONATIONS</h2>
+            <button class="button-container"> <a asp-area="" asp-controller="Home" asp-action="Monentart_Donations">Monetary Donations</a></button>
+
+        </div>
+        <div class="right-side">
+            <h2>GOODS DONATIONS</h2>
+            <button class="button-container"> <a asp-area="" asp-controller="Home" asp-action="Good_Donations">Goods Donations</a></button>
+        </div>
+    </div>
+
+</body>
+</html>

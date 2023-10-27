@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Registration";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Registration Form</title>
+    <style>
+        .register {
+            font-family: Arial, sans-serif;
+            background-color: purple;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .registration-container {
+            background-color: orange;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+        }
+
+            .registration-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                font-weight: bold;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-group input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .form-group input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+
+        .button {
+            display: inline-block;
+            padding: 10px 85px;
+            background-color: #0056b3;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="register">
+            <div class="registration-container">
+                <h2>Register</h2>
+        <form action="Registration" method="post">
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="First_Name" name="First_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="Last_Name" name="Last_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="Email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="Password" name="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+                <a href="login.html"><button type="button">Login</button></a>
+            </div>
+            <div>
+                @(TempData["Message"] as string)
+            </div>
+        </form>
+      </div> 
+
+        <hr />
+    </div>
+</body>
+</html>
